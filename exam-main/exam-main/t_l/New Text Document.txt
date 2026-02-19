@@ -1,0 +1,133 @@
+1. arithmetic operations in python (add, sub, mul, div)
+a = 20
+b = 5
+
+print("addition:", a + b)
+print("subtraction:", a - b)
+print("multiplication:", a * b)
+print("division:", a / b)
+
+2. arithmetic operations in prolog (subtraction, multiplication)
+subtract(X, Y, R) :- R is X - Y.
+multiply(X, Y, R) :- R is X * Y.
+
+
+query
+
+?- subtract(10, 4, R).
+?- multiply(6, 7, R).
+
+3. prolog program for addition of two numbers
+add(X, Y, R) :- R is X + Y.
+
+
+query
+
+?- add(8, 9, R).
+
+4. prolog program for sum of all numbers in a list
+sum_list([], 0).
+sum_list([H|T], S) :-
+    sum_list(T, S1),
+    S is H + S1.
+
+
+query
+
+?- sum_list([1,2,3,4,5], S).
+
+5. python program to reverse given number
+num = 12345
+rev = 0
+
+while num > 0:
+    rev = rev * 10 + num % 10
+    num //= 10
+
+print("reversed number:", rev)
+
+6. fol → prolog (likes problem)
+facts
+likes(sakib, cricket).
+likes(sakib, football).
+likes(sakib, rugby).
+
+likes(riad, football).
+likes(riad, rugby).
+
+likes(sabbir, flower).
+likes(sabbir, custurd).
+likes(sabbir, fruits).
+
+rules
+likes(sabbir, X) :- likes(_, football), X = football.
+likes(sakib, X) :- likes(sabbir, X).
+
+queries
+?- likes(sabbir, X).
+?- likes(sakib, X).
+
+7. fol → prolog (family & gender problem)
+facts
+brother(rashid, tamim).
+brother(rashid, rishab).
+
+sister(champa, tamim).
+sister(champa, rishab).
+
+man(rashid).
+man(tamim).
+man(rishab).
+woman(champa).
+
+queries
+?- woman(X).
+?- man(X).
+?- sister(champa, X).
+?- brother(rashid, X).
+?- brother(X, tamim).
+
+8. eliza chatbot (simple relational knowledge – python)
+while True:
+    user = input("you: ").lower()
+
+    if user == "hi":
+        print("eliza: hello")
+    elif "sad" in user:
+        print("eliza: why are you sad")
+    elif "happy" in user:
+        print("eliza: that's good to hear")
+    elif user == "bye":
+        print("eliza: goodbye")
+        break
+    else:
+        print("eliza: tell me more")
+
+9. simple voice bot (nlp + relational knowledge – python)
+import pyttsx3
+
+engine = pyttsx3.init()
+
+while True:
+    text = input("you: ").lower()
+
+    if "hello" in text:
+        engine.say("hello, how can i help you")
+    elif "name" in text:
+        engine.say("i am an ai voice bot")
+    elif "bye" in text:
+        engine.say("goodbye")
+        engine.runAndWait()
+        break
+    else:
+        engine.say("please say again")
+
+    engine.runAndWait()
+
+10. nlp program to count words in a file
+file = open("sample.txt", "r")
+text = file.read()
+file.close()
+
+words = text.split()
+print("total words:", len(words))

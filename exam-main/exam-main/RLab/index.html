@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazing Animations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Arial', sans-serif;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        h1 {
+            color: white;
+            font-size: 2.5rem;
+            text-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            animation: fadeInDown 1s ease-in;
+        }
+
+        .container {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 1000px;
+        }
+
+        /* Bounce Animation */
+        .bounce-box {
+            width: 100px;
+            height: 100px;
+            background: #ff6b6b;
+            border-radius: 10px;
+            animation: bounce 1.5s infinite;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-30px); }
+        }
+
+        /* Rotate Animation */
+        .rotate-box {
+            width: 100px;
+            height: 100px;
+            background: #4ecdc4;
+            border-radius: 10px;
+            animation: rotate 3s linear infinite;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Pulse Animation */
+        .pulse-box {
+            width: 100px;
+            height: 100px;
+            background: #ffd93d;
+            border-radius: 10px;
+            animation: pulse 2s ease-in-out infinite;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        /* Slide Animation */
+        .slide-box {
+            width: 100px;
+            height: 100px;
+            background: #6bcf7f;
+            border-radius: 10px;
+            animation: slide 2s ease-in-out infinite;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes slide {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(30px); }
+        }
+
+        /* Fade In Down */
+        @keyframes fadeInDown {
+            0% { opacity: 0; transform: translateY(-30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Glow Animation */
+        .glow-box {
+            width: 100px;
+            height: 100px;
+            background: #ff6348;
+            border-radius: 50%;
+            animation: glow 2s ease-in-out infinite;
+            box-shadow: 0 0 20px rgba(255, 99, 72, 0.5);
+        }
+
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 99, 72, 0.5); }
+            50% { box-shadow: 0 0 40px rgba(255, 99, 72, 1); }
+        }
+
+        /* Flip Animation */
+        .flip-box {
+            width: 100px;
+            height: 100px;
+            background: #a29bfe;
+            border-radius: 10px;
+            animation: flip 1.5s ease-in-out infinite;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes flip {
+            0%, 100% { transform: rotateY(0deg); }
+            50% { transform: rotateY(180deg); }
+        }
+
+        .label {
+            position: absolute;
+            margin-top: 120px;
+            color: white;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        .item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>✨ Amazing Animations ✨</h1>
+    
+    <div class="container">
+        <div class="item">
+            <div class="bounce-box"></div>
+            <div class="label">Bounce</div>
+        </div>
+        
+        <div class="item">
+            <div class="rotate-box"></div>
+            <div class="label">Rotate</div>
+        </div>
+        
+        <div class="item">
+            <div class="pulse-box"></div>
+            <div class="label">Pulse</div>
+        </div>
+        
+        <div class="item">
+            <div class="slide-box"></div>
+            <div class="label">Slide</div>
+        </div>
+        
+        <div class="item">
+            <div class="glow-box"></div>
+            <div class="label">Glow</div>
+        </div>
+        
+        <div class="item">
+            <div class="flip-box"></div>
+            <div class="label">Flip</div>
+        </div>
+    </div>
+</body>
+</html>

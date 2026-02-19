@@ -1,0 +1,10 @@
+likes(sakib,cricket).
+likes(sakib,football).
+likes(sakib,rugby).
+likes(riad,football).
+likes(riad,rugby).
+likes(sabbir,flower).
+likes(sabbir,custard).
+likes(sabbir,fruits).
+sabbirlikes(Guys):-likes(Guys,football).
+sakiblikes(Things):-likes(sabbir,Things).
